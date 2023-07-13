@@ -29,10 +29,10 @@ const DESCRIPTIONS = [
   'Лучшая свадьба — та, на которой ваши желудки полны.'
 ];
 const getIdGenerator = () => {
-  let LastIdGenerator = 0;
+  let lastIdGenerator = 0;
   return () => {
-    LastIdGenerator += 1;
-    return LastIdGenerator;
+    lastIdGenerator += 1;
+    return lastIdGenerator;
   };
 };
 function getRandomInteger(a, b) {
@@ -62,7 +62,7 @@ const createPhoto = ()=> ({
   url: `photos/${ getRandomInteger (1,6) }.jpg`,
   description: getRandomArrayElement(DESCRIPTIONS),
   likes: getRandomInteger (15, 200),
-  comments: createComment (),
+  comments: createComments (),
 });
 
 const createPhotos = Array.from({length:getRandomInteger (0, 30)}, createPhoto);
