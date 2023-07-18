@@ -25,3 +25,5 @@ const createNumber = (string) => {
 };
 
 createNumber ('агент 007');
+
+//const workday = (daybeggin, dayend, meetbeggin, meetlate) => {};
